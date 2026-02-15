@@ -150,6 +150,7 @@ public class Utils {
         String device = SystemProperties.get(Constants.PROP_NEXT_DEVICE,
                 SystemProperties.get(Constants.PROP_DEVICE));
         String eunoiaVersion = SystemProperties.get(Constants.PROP_BUILD_VERSION).toLowerCase(Locale.ROOT);
+        eunoiaVersion = eunoiaVersion.substring(0, eunoiaVersion.indexOf('.') + 1) + "x";
 
         String serverUrl = context.getString(R.string.updater_server_url);
 
